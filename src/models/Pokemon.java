@@ -1,5 +1,8 @@
 package models;
 
+
+import javax.swing.ImageIcon;
+
 import enums.TiposPokemon;
 
 public class Pokemon {
@@ -7,13 +10,15 @@ public class Pokemon {
 	/**
 	 * ATRIBUTOS
 	 */
-	private int numero;
+	private int numeroPokemon;
 	private String nombre;
-	private TiposPokemon miTipo;
+	private TiposPokemon tipo1;
+	private TiposPokemon tipo2;
 	private double altura;
 	private double peso;
 	private String categoria;
 	private String habilidad;
+	private String imagen;
 	
 	
 	/**
@@ -26,21 +31,18 @@ public class Pokemon {
 	 * @param categoria
 	 * @param habilidad
 	 */
-	public Pokemon(int numero, String nombre, TiposPokemon tipo, double altura, double peso, String categoria,
-			String habilidad) {
+	public Pokemon(int numeroPokemon, String nombre, TiposPokemon tipo1, TiposPokemon tipo2, double altura, double peso, String categoria,String habilidad, String imagen) {
 		super();
-		this.numero = numero;
+		this.numeroPokemon = numeroPokemon;
 		this.nombre = nombre;
-		this.miTipo = tipo;
+		this.tipo1 = tipo1;
+		this.tipo2 = tipo2;
 		this.altura = altura;
 		this.peso = peso;
 		this.categoria = categoria;
 		this.habilidad = habilidad;
-	}
-
-
-	public Pokemon(Pokemon nombrePokemon) {
-
+		this.imagen = imagen;
+		
 	}
 
 
@@ -48,13 +50,13 @@ public class Pokemon {
 	 * G & S
 	 */
 	public int getNumero() {
-		return numero;
+		return numeroPokemon;
 	}
 
 
 
-	public void setNumero(int numero) {
-		this.numero = numero;
+	public void setNumero(int numeroPokemon) {
+		this.numeroPokemon = numeroPokemon;
 	}
 
 
@@ -71,14 +73,24 @@ public class Pokemon {
 
 
 
-	public TiposPokemon getMiTipo() {
-		return miTipo;
+	public TiposPokemon getTipo1() {
+		return tipo1;
 	}
 
 
 
-	public void setMiTipo(TiposPokemon miTipo) {
-		this.miTipo = miTipo;
+	public void setTipo1(TiposPokemon tipo1) {
+		this.tipo1 = tipo1;
+	}
+
+	public TiposPokemon getTipo2() {
+		return tipo2;
+	}
+
+
+
+	public void setTipo2(TiposPokemon tipo2) {
+		this.tipo2 = tipo2;
 	}
 
 
@@ -127,6 +139,17 @@ public class Pokemon {
 
 	public void setHabilidad(String habilidad) {
 		this.habilidad = habilidad;
+	}
+	
+	
+	public String getImagen() {
+		return imagen;
+	}
+
+
+
+	public void setImagen(String imagen) {
+		this.imagen = imagen;
 	}
 	
 
